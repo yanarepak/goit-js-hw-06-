@@ -9,7 +9,12 @@ const getEventSubmit = function (event) {
         return alert("Заповніть усі поля!")
     }
 
-    event.currentTarget.reset()
+    const userInf = { email: email.value, password: password.value }
+    console.log(userInf);
+    
+    event.currentTarget.reset();
 }
 
 loginFormEl.addEventListener("submit", getEventSubmit)
+
+
