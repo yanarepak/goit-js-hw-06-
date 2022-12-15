@@ -1,9 +1,10 @@
 const lengthItems = document.querySelectorAll(".item");
 console.log(`Number of categories: ${lengthItems.length}`);
 
-for (let i = 0; i < lengthItems.length; i++){
-   const categoryTitles = (lengthItems[i].children[0].innerText);
-    console.log(`Category: ${categoryTitles}`);
-   const categoryEl = categoryTitles.length
-    console.log(`Elements: ${categoryEl}`)
+const ulList = document.querySelector("#categories")
+const itemList = ulList.children
+
+for (const element of itemList) {
+    console.log("Categorie:" + element.querySelector("h2").textContent);
+    console.log("Elements:" + element.querySelector("ul").children.length);
 }

@@ -1,6 +1,7 @@
 const loginFormEl = document.querySelector(".login-form")
 
 const getEventSubmit = function (event) {
+    event.preventDefault();
 
     const { elements: { email, password }, } = event.currentTarget;
     
